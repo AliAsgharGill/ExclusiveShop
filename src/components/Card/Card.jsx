@@ -1,19 +1,15 @@
 import { Card } from "antd";
 const { Meta } = Card;
-const CardComponent = () => (
+const CardComponent = ({ url, title, description }) => (
   <Card
     hoverable
     style={{
       width: 240,
     }}
-    cover={
-      <img
-        alt="example"
-        src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      />
-    }
+    cover={<img alt="example" src={url} />}
   >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
+    <Meta title={title} description={description} />
   </Card>
 );
+
 export default CardComponent;
