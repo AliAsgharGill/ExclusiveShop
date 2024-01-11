@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import SearchBar from "./Serach/Search";
-const Navbar = () => {
+const Navbar = (totoalNumberOfProducts) => {
   return (
     <>
       <nav className="bg-white border-gray-200 ">
@@ -55,7 +55,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="products"
+                  to="/products"
                   className="text-center text-black text-base font-normal font-['Poppins'] leading-normal hover:underline"
                 >
                   Products
@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
           {/* serach bar */}
           <div className="flex md:order-2">
-            <SearchBar />
+            <SearchBar totoalNumberOfProducts={totoalNumberOfProducts} />
           </div>
         </div>
       </nav>

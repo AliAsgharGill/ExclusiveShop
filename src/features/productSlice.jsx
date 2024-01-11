@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getAllData = createAsyncThunk(
-  "products",
+  "fetch/products",
   async (args, { rejectWithValue }) => {
     const response = await fetch(
       "https://65784a9df08799dc8044d036.mockapi.io/CRUD"
